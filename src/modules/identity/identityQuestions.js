@@ -1,7 +1,7 @@
 export const QUESTIONS = [
   { id: 'q1', text: 'ドンキーの現部長の苗字（漢字）', answer: '大坪' ,explanation:'つぼしんが通称'},
   { id: 'q2', text: 'まほ＠3女のスマは誰より速い？（苗字漢字）', answer: '酒寄' ,explanation:'フーズフーで言及がありました'},
-  { id: 'q3', text: '幹コンの日程（半角数字　例:0629）', answer: '0906' ,explanation:'みんな行きましょう'},
+  { id: 'q3', text: '幹コンの当初予定されていた日程（半角数字　例:0629）', answer: '0906' ,explanation:'日程はまだ出ていませんがみんな行きましょう'},
   { id: 'q4', text: 'HP団体戦BBSのユーザー名（半角）', answer: 'qazplm' ,explanation:'キーボード配列に着目ですね'},
   { id: 'q5', text: 'ドンポロの色を牧師が選ぶとしたら何色？（漢字）', answer: '赤' ,explanation:'広義の赤色になりそう'},
   { id: 'q6', text: 'おのあみ・ゆか＠4女やが1日テニスをする時に食べる白い四角い食べ物は？（漢字）', answer: '豆腐' ,explanation:'ポン酢持参がポイント'},
@@ -10,5 +10,6 @@ export const QUESTIONS = [
   { id: 'q9', text: 'JITC古川努コーチの得意ショットは？？（カタカナ）', answer: 'バックハンドスライス' ,explanation:'ドンキー全体グルもしっかり見ましょう！'},
   { id: 'q10', text: 'りょうた＠6男や坂木＠3男が共通して得意な冬の競技は？', answer: 'スキー' ,explanation:'LBJに二人とも所属しているそうですね'},
   { id: 'q11', text:'舎人練後によく行く西日暮里の池田ビル1Fの丼屋の正式名称は？（７文字）',answer:'伝説のすた丼屋',explanation:'たまにドンキーでテーブル席を占領してます'},
+  //{ id: 'q12', text:'',answer:'',explanation:''},
 ]
 //{ id: 'q', text:'',answer:'',explanation:''},

@@ -28,10 +28,10 @@ function IntelQuizList() {
   }
 
   const getAgentLevel = (score) => {
-    if (score >= 90) return '特級エージェント'
-    if (score >= 60) return '上級エージェント'
-    if (score >= 30) return '正規エージェント'
-    return '新人エージェント'
+    if (score >= 90) return '雑学王'
+    if (score >= 60) return 'インテリ'
+    if (score >= 30) return '物知り'
+    return '一般人'
   }
 
   return (

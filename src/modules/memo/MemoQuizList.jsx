@@ -20,16 +20,16 @@ function MemoQuizList() {
     localStorage.setItem('memoAnswers', JSON.stringify(updated))
 
     if (isCorrect) {
-      const newScore = score + 10
+      const newScore = score + 20
       setScore(newScore)
       localStorage.setItem('memoScore', newScore.toString())
     }
   }
 
   const getAgentLevel = (score) => {
-    if (score >= 90) return '特級エージェント'
-    if (score >= 60) return '上級エージェント'
-    if (score >= 30) return '正規エージェント'
+    if (score >= 220) return '特級エージェント'
+    if (score >= 150) return '上級エージェント'
+    if (score >= 100) return '正規エージェント'
     return '新人エージェント'
   }
 

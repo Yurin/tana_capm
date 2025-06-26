@@ -46,7 +46,7 @@ function Qset_01() {
         <div className="bg-white border border-cyan-500 rounded-lg p-5 shadow-md whitespace-pre-line min-h-[7em]">
           <p className="text-base text-cyan-900 leading-relaxed">{introMessage}</p>
         </div>
-        {totalScore >= 120 && (
+        {totalScore >= 200 && (
           <div className="mt-8 text-center">
             <p className="text-red-600 font-semibold mb-4"> 解析が進み新しい情報が入った</p>
             <button
@@ -58,7 +58,7 @@ function Qset_01() {
             <p className="text-green-400 font-sans mb-1">いつでもこのモジュールには戻って来れる</p>
           </div>
         )}
-        {totalScore >= 120 && (
+        {totalScore >= 400 && (
           <div className="mt-8 text-center">
             <p className="text-red-600 font-semibold mb-4"> 謎のメッセージ</p>
             <button
