@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-function IntelQuizItem({ question, alreadyCorrect, onAnswer }) {
-  const [selected, setSelected] = useState(null)
+function IntelQuizItem({ question, alreadyCorrect, alreadySelected, onAnswer }) {
+  const [selected, setSelected] = useState(alreadySelected || null)
   const [answered, setAnswered] = useState(!!alreadyCorrect)
 
   const handleSelect = (option) => {
@@ -9,9 +9,10 @@ function IntelQuizItem({ question, alreadyCorrect, onAnswer }) {
 
     setSelected(option)
     const isCorrect = option === question.answer
-    onAnswer(question.id, isCorrect)
+    onAnswer(question.id, isCorrect, option)
     setAnswered(true)
   }
+
 
   return (
     <div className="border rounded p-4 space-y-2 bg-white shadow">

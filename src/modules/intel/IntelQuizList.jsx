@@ -13,10 +13,17 @@ function IntelQuizList() {
     setScore(savedScore)
   }, [])
 
-  const handleAnswer = (id, isCorrect) => {
+  const handleAnswer = (id, isCorrect, selectedOption) => {
     if (answers[id]) return
 
-    const updated = { ...answers, [id]: isCorrect }
+    const updated = {
+      ...answers,
+      [id]: {
+        correct: isCorrect,
+        selected: selectedOption,
+      },
+    }
+
     setAnswers(updated)
     localStorage.setItem('intelAnswers', JSON.stringify(updated))
 
@@ -26,6 +33,7 @@ function IntelQuizList() {
       localStorage.setItem('intelScore', newScore.toString())
     }
   }
+
 
   const getAgentLevel = (score) => {
     if (score >= 90) return '雑学王'
@@ -43,11 +51,12 @@ function IntelQuizList() {
 
       {QUESTIONS.map((q) => (
         <IntelQuizItem
-          key={q.id}
-          question={q}
-          alreadyCorrect={answers[q.id]}
-          onAnswer={handleAnswer}
-        />
+        key={q.id}
+        question={q}
+        alreadyCorrect={answers[q.id]?.correct}
+        alreadySelected={answers[q.id]?.selected}
+        onAnswer={handleAnswer}
+      />
       ))}
     </div>
   )

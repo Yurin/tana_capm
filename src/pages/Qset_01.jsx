@@ -29,6 +29,10 @@ function Qset_01() {
     setTotalScore(identity + intel + memo + photo)
   }, [])
 
+  const IMAGE_COUNT = 10; // 画像の数に合わせて変える（例：image/img1.jpg 〜 image/img5.jpg）
+  const unlockedImages = Math.min(Math.floor(totalScore / 80), IMAGE_COUNT); // 100点ごとにアンロック
+  const imagePaths = Array.from({ length: unlockedImages }, (_, i) => ` /image/image${i + 1}.jpg`);
+
   const handleClick = (key) => {
     if (cleared[key]) return
     navigate(
@@ -58,7 +62,7 @@ function Qset_01() {
             <p className="text-green-400 font-sans mb-1">いつでもこのモジュールには戻って来れる</p>
           </div>
         )}
-        {totalScore >= 900 && (
+        {totalScore >= 700 && (
           <div className="mt-8 text-center">
             <p className="text-red-600 font-semibold mb-4"> 謎のメッセージ</p>
             <button
@@ -101,9 +105,22 @@ function Qset_01() {
                   <div className="mt-2 text-xs text-green-600 font-medium">完了済み</div>
                 )}
               </button>
+
+
             )
           })}
         </div>
+
+        {unlockedImages > 0 && (
+  <div className="grid grid-cols-2 gap-4 mt-6">
+    {imagePaths.map((src, i) => (
+      <div key={i} className="border rounded-lg overflow-hidden shadow-sm">
+        <img src={src} alt={`unlocked ${i + 1}`} className="w-full object-cover" />
+        <p className="text-center text-xs text-gray-600 p-1">File {i + 1}</p>
+      </div>
+    ))}
+  </div>
+)}
       </div>
     </div>
   )

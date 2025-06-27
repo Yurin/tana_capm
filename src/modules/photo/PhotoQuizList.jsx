@@ -32,10 +32,10 @@ const handleAnswer = (questionId, points) => {
 
 
   const getAgentLevel = (score) => {
-    if (score >= 90) return '特級エージェント'
-    if (score >= 60) return '上級エージェント'
-    if (score >= 30) return '正規エージェント'
-    return '新人エージェント'
+    if (score >= 300) return 'みんな仲が良さそうだね'
+    if (score >= 200) return 'いっぱい歩こう'
+    if (score >= 100) return '天気が良くていいね'
+    return '頑張ろう'
   }
 
   return (
