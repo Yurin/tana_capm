@@ -20,7 +20,7 @@ function MemoQuizList() {
     localStorage.setItem('memoAnswers', JSON.stringify(updated))
 
     if (isCorrect) {
-      const newScore = score + 20
+      const newScore = score + 30
       setScore(newScore)
       localStorage.setItem('memoScore', newScore.toString())
     }

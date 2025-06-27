@@ -35,7 +35,7 @@ function PhotoQuizItem({ question, onAnswer }) {
     )
 
     // 点数報告
-    onAnswer(question.id, matched ? 10 : 0)
+    onAnswer(question.id, matched ? 50 : 0)
   }
 
   return (
