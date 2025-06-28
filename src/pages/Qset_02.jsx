@@ -26,7 +26,7 @@ function Qset_02() {
           type="text"
           value={suspect}
           onChange={handleChange}
-          placeholder="犯人の名前を入力"
+          placeholder="犯人の名前を入力して大草原に15:00集合"
           className="w-full px-4 py-2 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
 
