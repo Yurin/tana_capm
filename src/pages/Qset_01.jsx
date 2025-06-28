@@ -57,7 +57,7 @@ function Qset_01() {
               onClick={() => navigate('/mission_02')}
               className="px-6 py-2 bg-red-600 text-white rounded hover:bg-blue-500 transition"
             >
-              緊急任務に進む
+              緊急任務に進む（11:45までは開かないでください）
             </button>
             <p className="text-green-400 font-sans mb-1">いつでもこのモジュールには戻って来れる</p>
           </div>

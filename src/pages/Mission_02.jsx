@@ -6,7 +6,7 @@ function Mission_02() {
   const [input, setInput] = useState('')
   const [error, setError] = useState(false)
 
-  const validKeywords = ['ドンキー', 'さんぴあ']//TODO 
+  const validKeywords = ['HA','NN','IN','A','I']//TODO 
 
   const handleSubmit = () => {
     const normalized = input.trim().toLowerCase()
