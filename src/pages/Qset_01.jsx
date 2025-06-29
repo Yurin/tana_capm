@@ -62,7 +62,7 @@ function Qset_01() {
             <p className="text-green-400 font-sans mb-1">いつでもこのモジュールには戻って来れる</p>
           </div>
         )}
-        {totalScore >= 700 && (
+        {totalScore >= 500 && (
           <div className="mt-8 text-center">
             <p className="text-red-600 font-semibold mb-4"> 謎のメッセージ</p>
             <button
