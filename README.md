@@ -1,12 +1,69 @@
-# React + Vite
+# 🔍 謎解きウォークラリーアプリ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+サークルのイベント用に作った謎解き企画支援アプリです。  
+問題の作成・管理からヒント表示・回答チェックまで、イベント運営に必要な機能をまとめています。
 
-Currently, two official plugins are available:
+🌐 **デプロイ先**: [tana-capm.vercel.app](https://tana-capm.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ 主な機能
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **謎解き問題の作成・管理** — 問題文・ヒント・正解をまとめて登録・編集できます
+- **ヒント表示** — 参加者が詰まったときに段階的なヒントを確認できます
+- **回答チェック・正誤判定** — 入力した回答が正解かどうかをその場で判定します
+
+---
+
+## 🚀 使い方
+
+### アクセスする
+
+ブラウザで [https://tana-capm.vercel.app](https://tana-capm.vercel.app) を開くだけで使えます。インストール不要です。
+
+### 問題を作成する（企画担当向け）
+
+1. 問題作成画面から問題文・ヒント・正解を入力して登録します
+2. 登録した問題は一覧で管理・編集できます
+
+### 参加者として使う
+
+1. 割り当てられた問題ページを開きます
+2. ヒントボタンを押すと段階的にヒントが表示されます
+3. 答えを入力して送信すると、正解・不正解が表示されます
+
+---
+
+## 🛠 技術スタック
+
+| 項目 | 内容 |
+|------|------|
+| フレームワーク | React 19 |
+| ビルドツール | Vite 6 |
+| スタイリング | Tailwind CSS 3 |
+| ルーティング | React Router DOM 7 |
+| デプロイ | Vercel |
+
+---
+
+## 💻 ローカルで動かす場合
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/Yurin/tana_capm.git
+cd tana_capm
+
+# 依存パッケージをインストール
+npm install
+
+# 開発サーバーを起動
+npm run dev
+```
+
+起動後、ブラウザで `http://localhost:5173` を開いてください。
+
+---
+
+## 📝 ライセンス
+
+個人・サークル内利用のために作成したアプリです。
